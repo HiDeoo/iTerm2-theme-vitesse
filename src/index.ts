@@ -1,0 +1,3 @@
+console.warn('hello')
+
+export {}
