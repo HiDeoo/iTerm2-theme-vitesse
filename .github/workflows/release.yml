@@ -1,0 +1,40 @@
+name: release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  publish:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Generate changelog
+        run: pnpx changelogithub
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Bundle themes
+        run: cd themes && tar -czf iTerm2-theme-vitesse.tar.gz *.itermcolors
+        shell: bash
+
+      - name: Fetch release upload URL
+        id: release-upload-url
+        run: |
+          upload_url=$(curl -sL https://api.github.com/repos/HiDeoo/iTerm2-theme-vitesse/releases/latest | jq -r '.upload_url')
+          echo "::set-output name=upload_url::$upload_url"
+        shell: bash
+
+      - name: Upload release artifacts
+        uses: xresloader/upload-to-github-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          file: 'themes/*'
+          release_id: ${{ steps.release-upload-url.outputs.upload_url }}
