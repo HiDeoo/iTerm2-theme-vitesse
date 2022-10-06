@@ -15,6 +15,18 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.13.1
+          run_install: false
+
       - name: Generate changelog
         run: pnpx changelogithub
         env:
@@ -24,11 +36,12 @@ jobs:
         run: cd themes && tar -czf iTerm2-theme-vitesse.tar.gz *.itermcolors
         shell: bash
 
-      - name: Fetch release upload URL
-        id: release-upload-url
+      - name: Fetch release ID
+        id: release-id
         run: |
-          upload_url=$(curl -sL https://api.github.com/repos/HiDeoo/iTerm2-theme-vitesse/releases/latest | jq -r '.upload_url')
-          echo "::set-output name=upload_url::$upload_url"
+          sleep 5s
+          id=$(curl -sL --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' https://api.github.com/repos/HiDeoo/iTerm2-theme-vitesse/releases/latest | jq -r '.id')
+          echo "::set-output name=id::$id"
         shell: bash
 
       - name: Upload release artifacts
@@ -37,4 +50,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           file: 'themes/*'
-          release_id: ${{ steps.release-upload-url.outputs.upload_url }}
+          release_id: ${{ steps.release-id.outputs.id }}
