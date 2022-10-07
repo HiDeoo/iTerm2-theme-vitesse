@@ -2,7 +2,7 @@
   "name": "iterm2-theme-vitesse",
   "version": "0.1.0",
   "license": "MIT",
-  "description": "",
+  "description": "A set of iTerm2 color themes based on the Vitesse Theme for VS Code",
   "author": "HiDeoo <github@hideoo.dev> (https://hideoo.dev)",
   "type": "module",
   "scripts": {
@@ -35,7 +35,12 @@
   "packageManager": "pnpm@7.13.1",
   "private": true,
   "sideEffects": false,
-  "keywords": [],
+  "keywords": [
+    "iTerm2",
+    "color",
+    "theme",
+    "vitesse"
+  ],
   "homepage": "https://github.com/HiDeoo/iterm2-theme-vitesse",
   "repository": {
     "type": "git",
