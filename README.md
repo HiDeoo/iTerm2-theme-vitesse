@@ -5,6 +5,7 @@
       <img alt="Screenshot of iTerm2 Vitesse themes" src="https://user-images.githubusercontent.com/494699/194504943-d5d132c4-3fcf-4983-8f18-ba09fcc8cbfd.png" />
     </a>
   </p>
+  <p><em><a href="https://fsd.it/shop/fonts/pragmatapro/" title="PragmataPro font">PragmataPro</a> font & <a href="https://github.com/ogham/exa" title="exa is a modern replacement for ls">exa</a> for ls</em></p>
 </div>
 
 <div align="center">
