@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>iTerm2-theme-vitesse 🖌️</h1>
+  <h1>Vitesse Theme for iTerm2</h1>
   <p>
     <a href="https://user-images.githubusercontent.com/494699/194504943-d5d132c4-3fcf-4983-8f18-ba09fcc8cbfd.png" title="Screenshot of iTerm2 Vitesse themes">
       <img alt="Screenshot of iTerm2 Vitesse themes" src="https://user-images.githubusercontent.com/494699/194504943-d5d132c4-3fcf-4983-8f18-ba09fcc8cbfd.png" />
@@ -29,6 +29,8 @@ Head to the [releases page](https://github.com/HiDeoo/iTerm2-theme-vitesse/relea
 - [Vitesse Dark Soft](https://user-images.githubusercontent.com/494699/194505325-4bb882d8-0f5c-4d4c-8146-d9d805244020.png)
 - [Vitesse Light](https://user-images.githubusercontent.com/494699/194505358-5e65fbc5-2e8a-483f-b74a-aced12bef982.png)
 - [Vitesse Light Soft](https://user-images.githubusercontent.com/494699/194505385-e9e3a612-4d88-4f7f-ad78-704448560a6a.png)
+
+_You can also download a set of Alfred themes based on the same theme [here](https://github.com/HiDeoo/alfred-theme-vitesse)._
 
 ## Installation
 
