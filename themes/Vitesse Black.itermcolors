@@ -226,7 +226,7 @@
   <key>Cursor Color</key>
   <dict>
     <key>Alpha Component</key>
-    <real>0.93</real>
+    <real>0.8</real>
     <key>Blue Component</key>
     <real>0.792156862745098</real>
     <key>Color Space</key>
@@ -252,7 +252,7 @@
   <key>Foreground Color</key>
   <dict>
     <key>Alpha Component</key>
-    <real>0.93</real>
+    <real>0.8</real>
     <key>Blue Component</key>
     <real>0.792156862745098</real>
     <key>Color Space</key>
